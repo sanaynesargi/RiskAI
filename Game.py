@@ -1342,7 +1342,7 @@ class RiskGame:
             if troop.number > 0:
                 return troop
 
-    def _calculate_troop_strength(self, color, gamestate):
+    def _calculate_troop_strength(self, color, gamestate, territories):
         territories_owned = self.TERRITORIES_OWNED[color]
         colors = ["Red", "Black", "Light Blue", "Green"]
         colors.remove(color)
@@ -1351,7 +1351,7 @@ class RiskGame:
         color_troops = 0
 
         for c in colors:
-            for territory in self.TERRITORIES_OWNED[c]:
+            for territory in territories[c]:
                 troop_count = self._get_troop_count_from_territory(territory, gamestate)
                 total_troops += 1
 
@@ -1369,7 +1369,7 @@ class RiskGame:
     def evaluate_game_state(self, gamestate, territories_in_gs, color):
         num_territories_owned = len(territories_in_gs[color])
         territory_proportions = self._calculate_territories_owned_value(color)
-        troop_strength = self._calculate_troop_strength(color, gamestate)
+        troop_strength = self._calculate_troop_strength(color, gamestate, territories_in_gs)
         continents_owned = self._get_continents_owned(color, territories_in_gs)
         # max_risk_on_position = random.randint(0, self.TURNS_PLAYED)
 
