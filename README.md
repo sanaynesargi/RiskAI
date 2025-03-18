@@ -7,8 +7,6 @@
 
 *Updates to come (DNN for use of more strategies)*
 
-**IF YOU DON'T LIKE MO BAMBA by Shack Wes, then turn the MUSIC flag off, 
-the purpose of the music was to help in development!**
 
 This implementation of DL-MCTS on the game of RISK was meant to broaden my understanding of AI and various AI algorithms. Initally, I thought about approaching this problem with the classic minimax algorithm, but the game of RISK proved to be to complex for it. Instead I opted to use Monte Carlo Tree Search (MCTS) to search a wide range of possibilities in a short amount of time, this enabled me to create a (relatively) quick AI that makes pretty good moves. Of course RISK is a strategy game so "good" moves are subjective, but it gets the job done and I'm happy with it. 
 
@@ -31,7 +29,6 @@ Frameworks / Libraries:
 
 - **Pygame** - for Visualization
 - **NumPy** - for crunching the numbers
-- **ChatGPT** - for occasional guidance on MCTS concepts (**it cannot write this level of complex code-** ***at least not yet...***)
 
 ![Imgur Image](https://i.imgur.com/VXvbKQM.jpeg)
 
